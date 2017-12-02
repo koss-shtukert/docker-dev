@@ -30,7 +30,7 @@ RUN wget https://artifacts.elastic.co/downloads/kibana/kibana-6.0.0-amd64.deb &&
 RUN rm -rf elasticsearch-6.0.0.deb
 RUN rm -rf kibana-6.0.0-amd64.deb
 RUN rm -rf /var/www/* && rm -rf /etc/nginx/sites-enabled/*
-RUN mkdir /etc/ssl/aih
+RUN mkdir /etc/ssl/home
 
 COPY config/sysctl.conf /etc/sysctl.conf
 COPY config/elasticsearch.yml /etc/elasticsearch/elasticsearch.yml
