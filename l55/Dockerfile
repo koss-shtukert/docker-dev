@@ -35,6 +35,7 @@ RUN apt-get update && apt-get install -y \
         php-mysql
 
 RUN ln -sf /usr/share/zoneinfo/CET /etc/localtime
+RUN dpkg-reconfigure --frontend=noninteractive locales
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
 COPY config/php/pool/www.conf /etc/php/7.1/fpm/pool.d/www.conf
